@@ -39,7 +39,7 @@ const Register = () => {
     if (user.email !== '' && user.password !== '') {
       setShow(true)
       setModalTitle('Successful')
-      setModalBody('Logged in...')
+      setModalBody('Account created...')
     }
 
     if (user.password !== user.confirmPassword) {
