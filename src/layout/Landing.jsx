@@ -160,19 +160,17 @@ const Landing = () => {
                             </div>
                         </div>
 
-                        <div>
-                            <div className="col-lg-4 col-md-6">
-                                <div className="single-feature wow fadeInUp" data-wow-delay=".2s">
-                                    <div className="icon">
-                                        <i className="lni lni-code-alt"></i>
-                                        <svg width="110" height="72" viewBox="0 0 110 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M110 54.7589C110 85.0014 85.3757 66.2583 55 66.2583C24.6243 66.2583 0 85.0014 0 54.7589C0 24.5164 24.6243 0 55 0C85.3757 0 110 24.5164 110 54.7589Z" fill="#EBF4FF" />
-                                        </svg>
-                                    </div>
-                                    <div className="content">
-                                        <h5>Engaging Classroon</h5>
-                                        <p>{ENGAGING_CLASSROOM}</p>
-                                    </div>
+                        <div className="col-lg-4 col-md-6">
+                            <div className="single-feature wow fadeInUp" data-wow-delay=".2s">
+                                <div className="icon">
+                                    <i className="lni lni-code-alt"></i>
+                                    <svg width="110" height="72" viewBox="0 0 110 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M110 54.7589C110 85.0014 85.3757 66.2583 55 66.2583C24.6243 66.2583 0 85.0014 0 54.7589C0 24.5164 24.6243 0 55 0C85.3757 0 110 24.5164 110 54.7589Z" fill="#EBF4FF" />
+                                    </svg>
+                                </div>
+                                <div className="content">
+                                    <h5>Engaging Classroon</h5>
+                                    <p>{ENGAGING_CLASSROOM}</p>
                                 </div>
                             </div>
                         </div>
