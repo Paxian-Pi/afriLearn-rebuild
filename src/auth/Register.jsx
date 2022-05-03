@@ -17,11 +17,12 @@ const Register = () => {
   const [show, setShow] = useState(false)
 
   const handleClose = () => {
+
+    if(modalTitle === 'Success') navigate('/login')
+    
     setShow(false)
     setModalTitle('')
     setModalBody('')
-
-    if(modalTitle === 'Successful') navigate('/login')
   }
 
   let showModal;
@@ -38,7 +39,7 @@ const Register = () => {
     console.log(user)
     if (user.email !== '' && user.password !== '') {
       setShow(true)
-      setModalTitle('Successful')
+      setModalTitle('Success')
       setModalBody('Account created...')
     }
 

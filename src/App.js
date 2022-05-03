@@ -6,6 +6,7 @@ import Register from './auth/Register';
 import { Container } from 'react-bootstrap';
 import Navbar from './layout/Navbar';
 import Footer from './layout/Footer';
+import About from './layout/About';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
                 <Register />
               </div>
             </Container>} />
+            <Route path='/about' element={<About />} />
         </Routes>
         <Footer />
       </Router>

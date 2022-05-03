@@ -1,8 +1,9 @@
 import React, { useRef, useState } from 'react'
-import { Toast } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
-import ShowModalSingleAction from '../common/ShowModalSingleAction';
+import { Toast } from 'react-bootstrap'
+import { useNavigate } from 'react-router-dom'
+import ShowModalSingleAction from '../common/ShowModalSingleAction'
 import TextFieldGroup from '../common/TextFieldGroup'
+import styled from 'styled-components'
 
 const Login = () => {
 
@@ -59,7 +60,7 @@ const Login = () => {
     }
 
     return (
-        <div className="login">
+        <StyledDiv className="login">
             <div className="container">
                 <div className="row">
                     <div className="col-md-8 m-auto">
@@ -92,8 +93,13 @@ const Login = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </StyledDiv>
     )
 }
+
+const StyledDiv = styled.div`
+  background-image: url('assets/img/hero/hero-5/hero-bg.svg');
+  color: green;
+`
 
 export default Login

@@ -10,11 +10,9 @@ const Navbar = () => {
                         <div className="row align-items-center">
                             <div className="col-lg-12">
                                 <nav className="navbar navbar-expand-lg">
-                                    <a className="navbar-brand" href="index.html">
-                                        <Link to={'/'}>
-                                            <img src="assets/img/logo/greenlogo.png" alt="Logo" />
-                                        </Link>
-                                    </a>
+                                    <Link to={'/'} className="navbar-brand">
+                                        <img src="assets/img/logo/greenlogo.png" alt="Logo" />
+                                    </Link>
                                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent6" aria-controls="navbarSupportedContent6" aria-expanded="false" aria-label="Toggle navigation">
                                         <span className="toggler-icon"></span>
                                         <span className="toggler-icon"></span>
@@ -24,7 +22,7 @@ const Navbar = () => {
                                     <div className="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent6">
                                         <ul id="nav6" className="navbar-nav ms-auto">
                                             <li className="nav-item">
-                                                <a className="page-scroll" href="#about">About</a>
+                                                <Link className="nav-link" to={'/about'}>About</Link>
                                             </li>
 
                                             <li className="nav-item">

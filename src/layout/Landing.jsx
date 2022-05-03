@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import { AFRILEARN_WORKS, ENGAGING_CLASSROOM, EXAMINATION_SUCCESS, GENIUS_CONTENT_TEXT, GET_IN_TOUCH, HEADER_HEADER, HEADER_MAIN, PERSONALISED_EDUCTION, VALUE } from '../img/app/constants';
+import { AFRILEARN_WORKS, ENGAGING_CLASSROOM, EXAMINATION_SUCCESS, GENIUS_CONTENT_TEXT, GET_IN_TOUCH, HEADER_MAIN, HEADER_TEXT, PERSONALISED_EDUCTION, VALUE } from '../img/app/constants';
 import { Button, InputGroup, SplitButton } from 'react-bootstrap';
 import { Dropdown } from 'bootstrap';
 import ShowModalSingleAction from '../common/ShowModalSingleAction';
@@ -90,9 +90,9 @@ const Landing = () => {
                         <div className="row">
                             <div className="col-lg-6">
                                 <div className="hero-content-wrapper">
-                                    <h2 className="mb-30 wow fadeInUp" data-wow-delay=".2s">{HEADER_HEADER}</h2>
-                                    <p className="mb-30 wow fadeInUp" data-wow-delay=".4s">{HEADER_MAIN}</p>
-                                    <a href="#0" className="button button-lg radius-50 wow fadeInUp" data-wow-delay=".6s">Get Started <i className="lni lni-chevron-right"></i></a>
+                                    <h2 className="mb-30 wow fadeInUp" data-wow-delay=".2s">{HEADER_MAIN}</h2>
+                                    <p className="mb-30 wow fadeInUp" data-wow-delay=".4s">{HEADER_TEXT}</p>
+                                    <Button variant="success">Get Started <i className="lni lni-chevron-right"></i></Button>
                                 </div>
                             </div>
                             <div className="col-lg-6 align-self-end">
@@ -213,7 +213,7 @@ const Landing = () => {
 
 
                                 </ul>
-                                <a href="#0" className="button button-lg radius-10 wow fadeInUp" data-wow-delay=".5s">Start Learning</a>
+                                <Button variant="success">Start Learning</Button>
                             </div>
                         </div>
                         <div className="col-xl-7 col-lg-6">
@@ -241,23 +241,23 @@ const Landing = () => {
                                         <div className="single-pricing">
                                             <img src="assets/img/logo/videoLessons.d0ed402e.svg" alt="Logo" />
                                             <h3>1,500+</h3>
-                                            <a href="#0" className="button radius-30">See Videos</a>
+                                            <Button variant="success">See Videos</Button>
                                         </div>
                                     </div>
                                     <div className="single-pricing">
                                         <img src="assets/img/logo/practice questions.2852ff88.svg" alt="Logo" />
                                         <h3>23,813+</h3>
-                                        <a href="#0" className="button radius-30">Practice Questions</a>
+                                        <Button variant="success">Practice Questions</Button>
                                     </div>
                                     <div className="single-pricing">
                                         <img src="assets/img/logo/classnote.6ccaef05.svg" alt="Logo" />
                                         <h3>1,500+</h3>
-                                        <a href="#0" className="button radius-30">Rich 'n Ready Class Notes</a>
+                                        <Button variant="success">Rich 'n Ready Class Notes</Button>
                                     </div>
                                     <div className="single-pricing">
                                         <img src="assets/img/logo/engagements.d0788f27.svg" alt="Logo" />
                                         <h3>1,500+</h3>
-                                        <a href="#0" className="button radius-30">Learning Minutes</a>
+                                        <Button variant="success">Learning Minutes</Button>
                                     </div>
 
                                 </div>
@@ -314,7 +314,7 @@ const Landing = () => {
                                         </div>
                                         <div className="col-md-12">
                                             <div className="form-button">
-                                                <button type="submit" className="button"> <i className="lni lni-telegram-original"></i> Submit</button>
+                                                <Button className="button" variant="success"><i className="lni lni-telegram-original"></i> Submit</Button>
                                             </div>
                                         </div>
                                     </div>
@@ -328,7 +328,7 @@ const Landing = () => {
                                 <div className="row">
                                     <div className="col-lg-12 col-md-6">
                                         <div className="single-item">
-                                            <div className="icon">
+                                            <div className="icon data">
                                                 <i className="lni lni-phone"></i>
                                             </div>
                                             <div className="text">
@@ -373,7 +373,7 @@ const Landing = () => {
 }
 
 const StyledDiv = styled.div`
-  /* background-image: url('assets/img/hero/hero-5/hero-bg.svg') */
+  background-image: url('assets/img/hero/hero-5/hero-bg.svg');
   color: green;
 `
 
