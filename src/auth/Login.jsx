@@ -16,6 +16,7 @@ const Login = () => {
         }
 
         console.log(user)
+        if(user.email !== '' && user.password !== '') setShow(true)
     }
 
     const [show, setShow] = useState(false);
@@ -24,12 +25,12 @@ const Login = () => {
 
     let showModal;
 
-    if (true) {
+    if (show) {
         showModal = (
             <ShowModalSingleAction
                 show={show}
-                title='Error'
-                body='This is a demo version'
+                title='Successful'
+                body='Logged in...'
                 handler={handleClose}
             />
         )
@@ -49,7 +50,7 @@ const Login = () => {
                                 type='email'
                                 name='email'
                                 refInput={emailInput}
-                                error='Error'
+                                // error='Error'
                             />
 
                             <TextFieldGroup
@@ -57,7 +58,7 @@ const Login = () => {
                                 type='password'
                                 name='password'
                                 refInput={passwordInput}
-                                error='Error'
+                                // error='Error'
                             />
 
                             {showModal}

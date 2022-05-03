@@ -107,7 +107,7 @@ const Landing = () => {
                                                 </li>
 
                                                 <li className="nav-item">
-                                                    <Link className="nav-link" to={'/login'}>Login</Link>
+                                                    <Link className="page-scroll" to={'/login'}>Login</Link>
                                                 </li>
                                                 <li className="nav-item">
                                                     <a className="page-scroll" href="#contact">Register</a>
