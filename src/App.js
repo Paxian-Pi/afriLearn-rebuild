@@ -1,9 +1,11 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './auth/Login';
-import Landing from './Landing';
+import Landing from './layout/Landing';
 import Register from './auth/Register';
 import { Container } from 'react-bootstrap';
+import Navbar from './layout/Navbar';
+import Footer from './layout/Footer';
 
 
 function App() {
@@ -12,6 +14,7 @@ function App() {
   return (
     <div>
       <Router>
+        <Navbar />
         <Routes>
           <Route exact path='/' element={<Landing />} />
           <Route path='/login' element={
@@ -27,6 +30,7 @@ function App() {
               </div>
             </Container>} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );

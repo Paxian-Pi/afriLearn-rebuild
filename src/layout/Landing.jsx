@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components';
-import { AFRILEARN_WORKS, ENGAGING_CLASSROOM, EXAMINATION_SUCCESS, GENIUS_CONTENT_TEXT, GET_IN_TOUCH, HEADER_HEADER, HEADER_MAIN, PERSONALISED_EDUCTION, VALUE } from './img/app/constants';
+import { AFRILEARN_WORKS, ENGAGING_CLASSROOM, EXAMINATION_SUCCESS, GENIUS_CONTENT_TEXT, GET_IN_TOUCH, HEADER_HEADER, HEADER_MAIN, PERSONALISED_EDUCTION, VALUE } from '../img/app/constants';
 import { Button, InputGroup, SplitButton } from 'react-bootstrap';
 import { Dropdown } from 'bootstrap';
-import ShowModalSingleAction from './common/ShowModalSingleAction';
+import ShowModalSingleAction from '../common/ShowModalSingleAction';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
@@ -49,7 +49,7 @@ const Landing = () => {
         setSpin(true)
         setTimeout(() => {
             setSpin(false)
-        }, 5000)
+        }, 3000)
     }, [])
 
 
@@ -84,47 +84,6 @@ const Landing = () => {
             {spin && spinnar}
 
             <section id="home" className="hero-section-wrapper-5">
-
-                <header className="header header-6">
-                    <div className="navbar-area">
-                        <div className="container">
-                            <div className="row align-items-center">
-                                <div className="col-lg-12">
-                                    <nav className="navbar navbar-expand-lg">
-                                        <a className="navbar-brand" href="index.html">
-                                            <img src="assets/img/logo/greenlogo.png" alt="Logo" />
-                                        </a>
-                                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent6" aria-controls="navbarSupportedContent6" aria-expanded="false" aria-label="Toggle navigation">
-                                            <span className="toggler-icon"></span>
-                                            <span className="toggler-icon"></span>
-                                            <span className="toggler-icon"></span>
-                                        </button>
-
-                                        <div className="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent6">
-                                            <ul id="nav6" className="navbar-nav ms-auto">
-                                                <li className="nav-item">
-                                                    <a className="page-scroll" href="#about">About</a>
-                                                </li>
-
-                                                <li className="nav-item">
-                                                    <Link className="nav-link" to={'/login'}>Login</Link>
-                                                </li>
-                                                <li className="nav-item">
-                                                    <Link className="nav-link" to={'/register'}>Register</Link>
-                                                </li>
-                                            </ul>
-                                        </div>
-
-                                    </nav>
-                                    {/* <!-- navbar --> */}
-                                </div>
-                            </div>
-                            {/* <!-- row --> */}
-                        </div>
-                        {/* <!-- container --> */}
-                    </div>
-                    {/* <!-- navbar area --> */}
-                </header>
 
                 <StyledDiv className="hero-section hero-style-5 img-bg">
                     <div className="container">
@@ -406,62 +365,6 @@ const Landing = () => {
                     </div>
                 </div>
             </section>
-
-            <footer className="footer footer-style-4">
-                <div className="container">
-                    <div className="widget-wrapper">
-                        <div className="row">
-                            <div className="col-xl-3 col-lg-4 col-md-6">
-                                <div className="footer-widget wow fadeInUp" data-wow-delay=".2s">
-
-                                    <p className="desc">Terms of Service</p>
-                                    <ul className="socials">
-                                        <li> <a href="#0"> <i className="lni lni-facebook-filled"></i> </a> </li>
-                                        <li> <a href="#0"> <i className="lni lni-twitter-filled"></i> </a> </li>
-                                        <li> <a href="#0"> <i className="lni lni-instagram-filled"></i> </a> </li>
-                                        <li> <a href="#0"> <i className="lni lni-linkedin-original"></i> </a> </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="col-xl-2 offset-xl-1 col-lg-2 col-md-6 col-sm-6">
-                                <div className="footer-widget wow fadeInUp" data-wow-delay=".3s">
-                                    <h6>Quick Link</h6>
-                                    <ul className="links">
-                                        <li> <a href="#0">Home</a> </li>
-                                        <li> <a href="#0">About</a> </li>
-                                        <li> <a href="#0">Service</a> </li>
-                                        <li> <a href="#0">Testimonial</a> </li>
-                                        <li> <a href="#0">Contact</a> </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div className="col-xl-3 col-lg-3 col-md-6">
-                                <div className="footer-widget wow fadeInUp" data-wow-delay=".5s">
-                                    <h6>Download Our Mobile Apps</h6>
-                                    <ul className="download-app">
-                                        <li>
-                                            <a href="#0">
-                                                <span className="icon"><i className="lni lni-apple"></i></span>
-                                                <span className="text">Download on the <b>App Store</b> </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#0">
-                                                <span className="icon"><i className="lni lni-play-store"></i></span>
-                                                <span className="text">GET IT ON <b>Play Store</b> </span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="copyright-wrapper wow fadeInUp" data-wow-delay=".2s">
-                        <p>Copyright &copy; {new Date().getFullYear()} AfriLearn</p>
-                    </div>
-                </div>
-            </footer>
 
             <a href="#" className="scroll-top"> <i className="lni lni-chevron-up"></i> </a>
 

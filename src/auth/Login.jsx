@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import ShowModalSingleAction from '../common/ShowModalSingleAction';
 import TextFieldGroup from '../common/TextFieldGroup'
 
@@ -6,6 +7,8 @@ const Login = () => {
 
     const emailInput = useRef();
     const passwordInput = useRef();
+
+    const navigate = useNavigate()
 
     const submitHandler = (event) => {
         event.preventDefault();
@@ -21,7 +24,10 @@ const Login = () => {
 
     const [show, setShow] = useState(false);
 
-    const handleClose = () => setShow(false)
+    const handleClose = () => {
+        if(show) navigate('/')
+        setShow(false)
+    }
 
     let showModal;
 
