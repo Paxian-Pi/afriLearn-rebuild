@@ -11,53 +11,53 @@ import { Link, useNavigate } from 'react-router-dom';
 const Landing = () => {
 
     const [studentInfo, setStudentInfo] = useState('')
-  const [studentInfoTitle, setStudentInfoTitle] = useState('')
-  const [spin, setSpin] = useState(false)
+    const [studentInfoTitle, setStudentInfoTitle] = useState('')
+    const [spin, setSpin] = useState(false)
 
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false)
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false)
 
-  const title = (title) => {
+    const title = (title) => {
 
-  }
+    }
 
-  let showModal;
+    let showModal;
 
-  if (true) {
-    showModal = (
-      <ShowModalSingleAction
-        show={show}
-        title={studentInfoTitle}
-        body={studentInfo}
-        handler={handleClose}
-      />
+    if (true) {
+        showModal = (
+            <ShowModalSingleAction
+                show={show}
+                title={studentInfoTitle}
+                body={studentInfo}
+                handler={handleClose}
+            />
+        )
+    }
+
+    const infoForStudentAccount = (
+        <div>
+            <p>Learn through your syllabus at your unique pace</p>
+            <p>Achieve best grades and pass WAEC, JAMB, BECE</p>
+            <p>Interact with top tutors and become high-flying student</p>
+        </div>
     )
-  }
+    const infoTitleForStudentAccount = (
+        <p>Title For Student Tips</p>
+    )
 
-  const infoForStudentAccount = (
-    <div>
-      <p>Learn through your syllabus at your unique pace</p>
-      <p>Achieve best grades and pass WAEC, JAMB, BECE</p>
-      <p>Interact with top tutors and become high-flying student</p>
-    </div>
-  )
-  const infoTitleForStudentAccount = (
-    <p>Title For Student Tips</p>
-  )
-
-  useEffect(() => {
-    setSpin(true)
-    setTimeout(() => {
-      setSpin(false)
-    }, 5000)
-  }, [])
+    useEffect(() => {
+        setSpin(true)
+        setTimeout(() => {
+            setSpin(false)
+        }, 5000)
+    }, [])
 
 
-  const studentAccountInfoHandler = () => {
-    setShow(true)
-    setStudentInfo(infoForStudentAccount)
-    setStudentInfoTitle(infoTitleForStudentAccount)
-  }
+    const studentAccountInfoHandler = () => {
+        setShow(true)
+        setStudentInfo(infoForStudentAccount)
+        setStudentInfoTitle(infoTitleForStudentAccount)
+    }
 
     let spinnar = (
         <div className="preloader">
@@ -107,10 +107,10 @@ const Landing = () => {
                                                 </li>
 
                                                 <li className="nav-item">
-                                                    <Link className="page-scroll" to={'/login'}>Login</Link>
+                                                    <Link className="nav-link" to={'/login'}>Login</Link>
                                                 </li>
                                                 <li className="nav-item">
-                                                    <a className="page-scroll" href="#contact">Register</a>
+                                                    <Link className="nav-link" to={'/register'}>Register</Link>
                                                 </li>
                                             </ul>
                                         </div>
