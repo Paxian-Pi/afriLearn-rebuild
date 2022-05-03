@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react'
+import { Toast } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import ShowModalSingleAction from '../common/ShowModalSingleAction';
 import TextFieldGroup from '../common/TextFieldGroup'
@@ -19,13 +20,13 @@ const Login = () => {
         }
 
         console.log(user)
-        if(user.email !== '' && user.password !== '') setShow(true)
+        if (user.email !== '' && user.password !== '') setShow(true)
     }
 
     const [show, setShow] = useState(false);
 
     const handleClose = () => {
-        if(show) navigate('/')
+        if (show) navigate('/')
         setShow(false)
     }
 
@@ -39,6 +40,21 @@ const Login = () => {
                 body='Logged in...'
                 handler={handleClose}
             />
+        )
+    }
+
+    let toast;
+
+    if (show) {
+        toast = (
+            <Toast onClose={handleClose} show={show} delay={5000} autohide className='w-100 mt-50'>
+                <Toast.Header closeButton={false}>
+                    <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
+                    <strong className="me-auto">Success</strong>
+                    <small>{new Date().getHours()}:{new Date().getMinutes()}:{new Date().getSeconds()}</small>
+                </Toast.Header>
+                <Toast.Body>Logged in...</Toast.Body>
+            </Toast>
         )
     }
 
@@ -56,7 +72,7 @@ const Login = () => {
                                 type='email'
                                 name='email'
                                 refInput={emailInput}
-                                // error='Error'
+                            // error='Error'
                             />
 
                             <TextFieldGroup
@@ -64,12 +80,14 @@ const Login = () => {
                                 type='password'
                                 name='password'
                                 refInput={passwordInput}
-                                // error='Error'
+                            // error='Error'
                             />
 
-                            {showModal}
+                            {/* {showModal} */}
 
                             <input type="submit" className="btn btn-info btn-block mt-4" />
+
+                            {toast}
                         </form>
                     </div>
                 </div>
