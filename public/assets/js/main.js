@@ -43,7 +43,7 @@
   );
   navbarToggler6.addEventListener('click', function () {
     navbarToggler6.classList.toggle("active");
-  })
+  });
 
 
   // section menu active
