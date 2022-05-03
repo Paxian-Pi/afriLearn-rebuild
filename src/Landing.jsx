@@ -6,6 +6,7 @@ import { Dropdown } from 'bootstrap';
 import ShowModalSingleAction from './common/ShowModalSingleAction';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Landing = () => {
 
@@ -106,7 +107,7 @@ const Landing = () => {
                                                 </li>
 
                                                 <li className="nav-item">
-                                                    <a className="page-scroll" href="#pricing">Login</a>
+                                                    <Link className="nav-link" to={'/login'}>Login</Link>
                                                 </li>
                                                 <li className="nav-item">
                                                     <a className="page-scroll" href="#contact">Register</a>
