@@ -17,6 +17,8 @@ const Landing = () => {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false)
 
+    const navigate = useNavigate()
+
     const title = (title) => {
 
     }
@@ -190,22 +192,22 @@ const Landing = () => {
                                 <ul>
                                     <li className="wow fadeInUp" data-wow-delay=".35s">
                                         <i className="lni lni-checkmark-circle"></i>
-                                        <Button variant="outline-success">Create Free Student Account</Button>
+                                        <Button onClick={() => navigate('/register')} variant="outline-success">Create Free Student Account</Button>
                                         <Button onClick={studentAccountInfoHandler} variant="outline-success"><i className="lni lni-chevron-right" /></Button>
                                     </li>
                                     <li className="wow fadeInUp" data-wow-delay=".35s">
                                         <i className="lni lni-checkmark-circle"></i>
-                                        <Button variant="outline-success">Create Free Teacher Account</Button>
+                                        <Button onClick={() => navigate('/register')} variant="outline-success">Create Free Teacher Account</Button>
                                         <Button onClick={() => alert('Info for Teacher account will appear like for student')} variant="outline-success"><i className="lni lni-chevron-right" /></Button>
                                     </li>
                                     <li className="wow fadeInUp" data-wow-delay=".35s">
                                         <i className="lni lni-checkmark-circle"></i>
-                                        <Button variant="outline-success">Create Free Parent Account</Button>
+                                        <Button onClick={() => navigate('/register')} variant="outline-success">Create Free Parent Account</Button>
                                         <Button onClick={() => alert('Info for Parent account will appear like for student')} variant="outline-success"><i className="lni lni-chevron-right" /></Button>
                                     </li>
                                     <li className="wow fadeInUp" data-wow-delay=".35s">
                                         <i className="lni lni-checkmark-circle"></i>
-                                        <Button variant="outline-success">Create Free School Account</Button>
+                                        <Button onClick={() => navigate('/register')} variant="outline-success">Create Free School Account</Button>
                                         <Button onClick={() => alert('Info for School account will appear like for student')} variant="outline-success"><i className="lni lni-chevron-right" /></Button>
                                     </li>
 
