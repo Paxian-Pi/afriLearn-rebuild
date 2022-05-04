@@ -17,7 +17,10 @@ const Landing = () => {
 
     const [showT, setShowT] = useState(false);
     const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false)
+    const handleClose = () => {
+        setShow(false)
+        setShowT(false)
+    }
 
     const navigate = useNavigate()
 
@@ -74,7 +77,7 @@ const Landing = () => {
         // </Toast>
 
         <ShowModalSingleAction
-            show={show}
+            show={showT}
             title='Tip'
             body={toastBody}
             handler={handleClose}
@@ -87,7 +90,7 @@ const Landing = () => {
         if (role === 'Parent') setToastBody('Register Parent')
         if (role === 'School') setToastBody('Register School')
 
-        setShow(true)
+        setShowT(true)
     }
 
     let spinnar = (
