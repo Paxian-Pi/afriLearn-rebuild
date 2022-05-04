@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import { AFRILEARN_WORKS, ENGAGING_CLASSROOM, EXAMINATION_SUCCESS, GENIUS_CONTENT_TEXT, GET_IN_TOUCH, HEADER_MAIN, HEADER_TEXT, PERSONALISED_EDUCTION, VALUE } from '../img/app/constants';
-import { Button, InputGroup, SplitButton } from 'react-bootstrap';
+import { Button, InputGroup, SplitButton, Toast } from 'react-bootstrap';
 import { Dropdown } from 'bootstrap';
 import ShowModalSingleAction from '../common/ShowModalSingleAction';
 import { useState } from 'react';
@@ -13,7 +13,9 @@ const Landing = () => {
     const [studentInfo, setStudentInfo] = useState('')
     const [studentInfoTitle, setStudentInfoTitle] = useState('')
     const [spin, setSpin] = useState(false)
+    const [toastBody, setToastBody] = useState('')
 
+    const [showT, setShowT] = useState(false);
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false)
 
@@ -61,6 +63,33 @@ const Landing = () => {
         setStudentInfoTitle(infoTitleForStudentAccount)
     }
 
+    const showToast = (
+        // <Toast onClose={handleClose} show={showT} delay={5000} autohide className='w-100 mt-50'>
+        //     <Toast.Header closeButton={false}>
+        //         <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
+        //         <strong className="me-auto">Tip</strong>
+        //         <small>{new Date().getHours()}:{new Date().getMinutes()}:{new Date().getSeconds()}</small>
+        //     </Toast.Header>
+        //     <Toast.Body>{toastBody}</Toast.Body>
+        // </Toast>
+
+        <ShowModalSingleAction
+            show={show}
+            title='Tip'
+            body={toastBody}
+            handler={handleClose}
+        />
+    )
+
+    const onClickHandler = (role) => {
+
+        if (role === 'Teacher') setToastBody('Register Teacher')
+        if (role === 'Parent') setToastBody('Register Parent')
+        if (role === 'School') setToastBody('Register School')
+
+        setShow(true)
+    }
+
     let spinnar = (
         <div className="preloader">
             <div className="loader">
@@ -84,6 +113,8 @@ const Landing = () => {
         <div>
             {showModal}
             {spin && spinnar}
+
+            {showToast}
 
             <section id="home" className="hero-section-wrapper-5">
 
@@ -197,20 +228,19 @@ const Landing = () => {
                                     </li>
                                     <li className="wow fadeInUp" data-wow-delay=".35s">
                                         <i className="lni lni-checkmark-circle"></i>
-                                        <Button onClick={() => navigate('/register')} variant="outline-success">Create Free Teacher Account</Button>
+                                        <Button onClick={() => { onClickHandler('Teacher') }} variant="outline-success">Create Free Teacher Account</Button>
                                         <Button onClick={() => alert('Info for Teacher account will appear like for student')} variant="outline-success"><i className="lni lni-chevron-right" /></Button>
                                     </li>
                                     <li className="wow fadeInUp" data-wow-delay=".35s">
                                         <i className="lni lni-checkmark-circle"></i>
-                                        <Button onClick={() => navigate('/register')} variant="outline-success">Create Free Parent Account</Button>
+                                        <Button onClick={() => { onClickHandler('Parent') }} variant="outline-success">Create Free Parent Account</Button>
                                         <Button onClick={() => alert('Info for Parent account will appear like for student')} variant="outline-success"><i className="lni lni-chevron-right" /></Button>
                                     </li>
                                     <li className="wow fadeInUp" data-wow-delay=".35s">
                                         <i className="lni lni-checkmark-circle"></i>
-                                        <Button onClick={() => navigate('/register')} variant="outline-success">Create Free School Account</Button>
+                                        <Button onClick={() => { onClickHandler('School') }} variant="outline-success">Create Free School Account</Button>
                                         <Button onClick={() => alert('Info for School account will appear like for student')} variant="outline-success"><i className="lni lni-chevron-right" /></Button>
                                     </li>
-
 
                                 </ul>
                                 <Button variant="success">Start Learning</Button>
